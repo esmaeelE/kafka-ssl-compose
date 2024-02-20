@@ -1,11 +1,17 @@
-# Kafka SSL Compose
+# Kafka, SSL, docker compose
 
-Provide docker-compose file and scripts for 2 Way SSL Kafka 
+Docker-compose file and scripts for two Way Kafka SSL.
 
-## How-to Use
+## Usage
 
-1. Execute `./create-certs.sh` to generate self-signed CA and certs
-2. Run `docker-compose up`
+0. Make sure keytool installed.
 
-That's all folks !
+In debian 12 system
+
+```
+sudo apt install openjdk-17-jre
+```   
+2. Execute `./create-certs.sh` to generate self-signed CA and certs.
+3. Run `docker-compose up` to start.
+
 
