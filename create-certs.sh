@@ -3,6 +3,12 @@
 set -o nounset \
     -o errexit
 
+if ! command -v keytool &> /dev/null
+then
+    echo "keytool could not be found."
+    exit 1
+fi
+
 printf "Deleting previous (if any)..."
 rm -rf secrets
 mkdir secrets
